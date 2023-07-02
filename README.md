@@ -1,3 +1,3 @@
 # webservco/command
 
-A PHP component.
+A PHP component/library.
