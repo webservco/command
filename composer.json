@@ -24,6 +24,11 @@
     ],
     "license" : "MIT",
     "name" : "webservco/command",
+    "require": {
+        "php" : "^8.2",
+        "psr/log": "^3",
+        "webservco/application": "^0"
+    },
     "require-dev": {
         "pds/skeleton": "^1",
         "phan/phan": "^5",
@@ -40,11 +45,6 @@
         "vimeo/psalm": "^5",
         "webservco/coding-standards": "^0",
         "webservco/component-common": "^0"
-    },
-    "require": {
-        "php" : "^8.2",
-        "psr/log": "^3",
-        "webservco/application": "^0"
     },
     "scripts": {
         "check:lint": "vendor/bin/parallel-lint bin config public resources src tests",
