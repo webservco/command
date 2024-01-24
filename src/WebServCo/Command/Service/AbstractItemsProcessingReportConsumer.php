@@ -9,12 +9,12 @@ use WebServCo\Command\Contract\ItemsProcessingReportInterface;
 
 abstract class AbstractItemsProcessingReportConsumer implements ItemsProcessingReportConsumerInterface
 {
-    public function __construct(private ItemsProcessingReportInterface $itemsProcessingReportInterface)
+    public function __construct(private ItemsProcessingReportInterface $itemsProcessingReport)
     {
     }
 
     public function getItemsProcessingReport(): ItemsProcessingReportInterface
     {
-        return $this->itemsProcessingReportInterface;
+        return $this->itemsProcessingReport;
     }
 }
