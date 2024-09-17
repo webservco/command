@@ -6,5 +6,5 @@ namespace WebServCo\Command\Contract;
 
 interface CommandFactoryInterface
 {
-    public function createCommand(): CommandInterface;
+    public function createCommand(): CommandRunnerInterface;
 }
