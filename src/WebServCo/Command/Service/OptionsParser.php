@@ -10,6 +10,7 @@ use WebServCo\Command\Contract\OptionsParserInterface;
 
 use function array_key_exists;
 use function getopt;
+use function is_array;
 use function is_bool;
 use function is_string;
 
@@ -90,6 +91,10 @@ final class OptionsParser implements OptionsParserInterface
     private function parseOptions(): bool
     {
         $options = getopt('', $this->availableOptions);
+
+        if (!is_array($options)) {
+            throw new UnexpectedValueException('Options is not an array.');
+        }
 
         foreach ($options as $key => $value) {
             if (!is_bool($value) && !is_string($value)) {
