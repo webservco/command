@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace WebServCo\Command\Service;
 
+use Override;
 use Psr\Log\LoggerInterface;
 use WebServCo\Command\Contract\OutputInterface;
 
@@ -15,6 +16,7 @@ final class OutputWithLogService implements OutputInterface
     {
     }
 
+    #[Override]
     public function echo(string $message): bool
     {
         echo $message;
@@ -27,6 +29,7 @@ final class OutputWithLogService implements OutputInterface
      * @param array<mixed> $context
      * @phpcs:enable
      */
+    #[Override]
     public function write(string $message, array $context = []): bool
     {
         $this->echo($message);

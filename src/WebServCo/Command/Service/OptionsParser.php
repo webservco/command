@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace WebServCo\Command\Service;
 
 use OutOfBoundsException;
+use Override;
 use UnexpectedValueException;
 use WebServCo\Command\Contract\OptionsParserInterface;
 
@@ -29,6 +30,7 @@ final class OptionsParser implements OptionsParserInterface
         $this->parseOptions();
     }
 
+    #[Override]
     public function getBoolValue(string $option): bool
     {
         if (!array_key_exists($option, $this->parsedOptions)) {
@@ -55,6 +57,7 @@ final class OptionsParser implements OptionsParserInterface
         return !$value;
     }
 
+    #[Override]
     public function getNullableStringValue(string $option): ?string
     {
         try {
@@ -64,6 +67,7 @@ final class OptionsParser implements OptionsParserInterface
         }
     }
 
+    #[Override]
     public function getStringValue(string $option): string
     {
         if (!array_key_exists($option, $this->parsedOptions)) {
