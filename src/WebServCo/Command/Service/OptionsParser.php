@@ -30,6 +30,11 @@ final class OptionsParser implements OptionsParserInterface
         $this->parseOptions();
     }
 
+    /**
+     * Typed value getter, named like the other get<Type> methods; renaming would break BC.
+     *
+     * @SuppressWarnings("PHPMD.BooleanGetMethodName")
+     */
     #[Override]
     public function getBoolValue(string $option): bool
     {
