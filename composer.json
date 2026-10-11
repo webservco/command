@@ -20,7 +20,7 @@
             "dealerdirect/phpcodesniffer-composer-installer": true
         }
     },
-    "description" : "A PHP component/library.",
+    "description" : "A PHP component/library. Helpers for command line scripts, including an option parser, output that also goes to the log, and a counter for processed items.",
     "homepage" : "https://webserv.co",
     "keywords" : [
         "component",
